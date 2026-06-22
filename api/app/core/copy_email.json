@@ -1,0 +1,14 @@
+{
+  "por_responsavel": {},
+
+  "por_obra": {},
+
+  "global": {
+    "cc": [
+      "email1@empresa.com",
+      "email2@empresa.com",
+      "email3@empresa.com",
+      "email4@empresa.com"
+    ]
+  }
+}

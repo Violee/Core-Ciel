@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  n8n:
+    image: n8nio/n8n
+    container_name: n8n
+    user: "1000:1000"
+
+    ports:
+      - "5678:5678"
+
+    env_file:
+      - .env
+
+    environment:
+      - N8N_FILESYSTEM_ALLOWLIST=/home/node/.n8n-files
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_EMAIL=Violee@gmail.com
+      - N8N_BASIC_AUTH_PASSWORD=12345678
+
+    volumes:
+      - ./n8n/data:/home/node/.n8n
+      - ./storage:/home/node/.n8n-files
+
+  api:
+    build: ./api
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./api:/app
+      - ./storage:/data

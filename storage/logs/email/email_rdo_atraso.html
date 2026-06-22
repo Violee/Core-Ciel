@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RDO em atraso</title>
+  <style>
+    /* Additional styles for better email compatibility */
+    body { margin: 0; padding: 0; background-color: #f4f6f8; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    .container { max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .header { background: linear-gradient(135deg, #0b3c5d, #1e5f74); color: #ffffff; padding: 30px 20px; text-align: center; }
+    .header h1 { margin: 0; font-size: 28px; font-weight: 600; }
+    .header p { margin: 10px 0 0; font-size: 16px; opacity: 0.9; }
+    .body { padding: 40px 30px; color: #333; font-size: 16px; line-height: 1.7; }
+    .body p { margin: 0 0 20px; }
+    .highlight { color: #e74c3c; font-weight: bold; }
+    .table { width: 100%; border-collapse: collapse; margin: 25px 0; background: #f8f9fa; border-radius: 6px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    .table th, .table td { padding: 15px; text-align: left; border-bottom: 1px solid #e9ecef; }
+    .table th { background: #0b3c5d; color: #ffffff; font-weight: 600; }
+    .table td { background: #ffffff; }
+    .table .delay { color: #e74c3c; font-weight: bold; }
+    .footer { background: #f8f9fa; padding: 20px; text-align: center; font-size: 12px; color: #6c757d; border-top: 1px solid #dee2e6; }
+    .cta { display: inline-block; background: #e74c3c; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-weight: bold; margin-top: 20px; }
+    .cta:hover { background: #c0392b; }
+  </style>
+</head>
+<body style="margin:0;padding:0;background-color:#f4f6f8;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+<table width="100%" cellpadding="0" cellspacing="0" style="padding:20px 0;">
+  <tr>
+    <td align="center">
+      <div class="container">
+        
+        <!-- HEADER -->
+        <div class="header">
+          <h1>Manas Ciel</h1>
+          <p>Monitoramento de Diário de Obra</p>
+        </div>
+
+        <!-- BODY -->
+        <div class="body">
+          <p>Ola <strong>{{NOME_RESPONSAVEL}}</strong>,</p>
+
+          <p>
+            Identificamos um <span class="highlight">atraso no envio de RDO aprovado</span>.
+          </p>
+
+          <table class="table">
+            <tr>
+              <th>Ultimo RDO aprovado</th>
+              <td>{{ULTIMO_RDO}}</td>
+            </tr>
+            <tr>
+              <th>Dias em atraso</th>
+              <td class="delay">{{DIAS_ATRASO}}</td>
+            </tr>
+            <tr>
+              <th>Obra</th>
+              <td>{{OBRA}}</td>
+            </tr>
+          </table>
+
+          <p>Por favor, regularize o quanto antes para evitar complicacoes.</p>
+
+          <a href="#" class="cta">Acessar Sistema</a>
+
+          <p style="margin-top:40px;">
+            Atenciosamente,<br>
+            <strong>Equipe Manas Ciel</strong>
+          </p>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+          E-mail automatico - nao responda. Para suporte, entre em contato conosco.
+        </div>
+
+      </div>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "obra_exemplo_id": {
+    "obra": "Nome da Obra",
+    "email_obra": "gerente@empresa.com",
+    "responsaveis": {
+      "Nome do Responsavel": {
+        "id_enginner": "ABC12",
+        "email": "responsavel@empresa.com",
+        "inicio": "2024-01-01",
+        "fim": null
+      }
+    }
+  }
+}
